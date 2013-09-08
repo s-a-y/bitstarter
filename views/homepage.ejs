@@ -162,7 +162,9 @@
             Example:<br/>
             - You donate 1 USD<br/>
             - We launch the service and charge 1% fee for our services<br/>
-            - You recharge mobile for free up to 100 USD in total!
+            - You recharge mobile for free up to 100 USD in total!<br/><br/>
+
+            Also everyone will get "Thank you" email, early access to our prototype and a little surprise!
           </p>
         </div>
         <div class="span5 asset">
@@ -246,6 +248,14 @@
   ga('create', 'UA-43851864-1', 'spend-a-bit.com');
   ga('send', 'pageview');
 
+  $(function() {
+    $("a.coinbase-button").click(function() {
+      ga('send', 'event', 'button', 'click', 'coinbase');
+    });
+    $("addthis_toolbox a").click(function() {
+      ga('send', 'event', 'button', 'click', 'addthis', $(this).attr("class"));
+    });
+  });
 </script>
 
   </body>
